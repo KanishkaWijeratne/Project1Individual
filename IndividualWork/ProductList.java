@@ -5,6 +5,8 @@ public class ProductList implements Serializable {
   private static final long serialVersionUID = 1L;
   private List<Product> products = new LinkedList<Product>();
   private static ProductList productList;
+  private static final String PRODUCT_STRING = "P";
+  private static int idNum = 1;
 
   private ProductList() {
   }
@@ -17,9 +19,12 @@ public class ProductList implements Serializable {
     }
   }
 
-  public boolean insertProduct(Product product) {
+  public Product insertProduct(String name, int amountInStock, double salePrice) {
+    String id = PRODUCT_STRING + idNum;
+    idNum++;
+    Product product = new Product(id, name, amountInStock, salePrice);
     products.add(product);
-    return true;
+    return product;
   }
 
   public Product search(String productID) {
