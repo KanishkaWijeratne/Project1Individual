@@ -1,0 +1,54 @@
+Script started on 2026-09-26 23:57:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="59" LINES="11"]
+[?2004h[0;32m@KanishkaWijeratne [0m➜ [1;34m/workspaces/Project1Individual/IndividualWork [0;36m([1;31mmain[0;36m) [0m$ Test[K[K[K[Kjava TestDriver
+[?2004l
+=== Testing ClientList singleton ===
+PASS: Singleton returns same instance
+
+=== Testing insertClient() and unique ID generation ===
+Created: Client name Alice Smith address 123 Main St id C1
+Created: Client name Bob Jones address 456 Oak Ave id C2
+PASS: Client 1 has non-null ID
+PASS: Client 2 has different ID than Client 1
+PASS: Client 1 name stored correctly
+PASS: Client 1 address stored correctly
+
+=== Testing search() ===
+PASS: search() finds existing client by ID
+PASS: search() returns null for unknown ID
+
+=== Testing getClients() iterator ===
+  Client name Alice Smith address 123 Main St id C1
+  Client name Bob Jones address 456 Oak Ave id C2
+PASS: getClients() returns all inserted clients
+
+=== Testing Client.addToWishList() - new item ===
+PASS: addToWishList() returns a WishListItem
+PASS: New item has correct product
+PASS: New item has correct quantity
+PASS: Client's wishlist now has 1 item
+
+=== Testing Client.addToWishList() - existing item (overwrite) ===
+PASS: Adding same product again overwrites quantity
+PASS: Wishlist still has only 1 item (no duplicate)
+PASS: Returned item is the same object as before
+
+=== Testing Client.addToWishList() - second distinct product ===
+PASS: Wishlist now has 2 distinct items
+
+=== Displaying final wishlist for Alice Smith ===
+  Widget - quantity: 7
+  Gadget - quantity: 2
+
+=== Testing ProductList ===
+PASS: ProductList returns same singleton instance
+PASS: Product inserted successfully
+PASS: Unknown product returns null
+  Product name Book amount in stock 10 sale price 14.99 id P3
+PASS: getProducts() returns inserted product
+
+=== All tests complete ===
+[?2004h[0;32m@KanishkaWijeratne [0m➜ [1;34m/workspaces/Project1Individual/IndividualWork [0;36m([1;31mmain[0;36m) [0m$ exit
+[?2004l
+exit
+
+Script done on 2026-09-26 23:57:34+00:00 [COMMAND_EXIT_CODE="0"]

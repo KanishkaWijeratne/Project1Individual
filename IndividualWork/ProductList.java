@@ -27,6 +27,11 @@ public class ProductList implements Serializable {
     return product;
   }
 
+  public Product insertProduct(Product product) {
+    products.add(product);
+    return product;
+  }
+
   public Product search(String productID) {
     for (Product product : products) {
       if (product.getId().equals(productID)) {
